@@ -41,6 +41,7 @@ public class HowFarController {
        
        c.add(Calendar.DATE, num);
        System.out.println(c.getTime());
+       daysTextSet.setText(num + " days later: " + String.valueOf(c.getTime()));
     }
 
 }
