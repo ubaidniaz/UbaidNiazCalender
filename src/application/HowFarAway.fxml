@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox prefHeight="220.0" prefWidth="262.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.CalenderController">
-	<!-- TODO Add Nodes -->
+<VBox prefHeight="220.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowFarController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#goBack" text="go back" />
+      <Label fx:id="testLabel" prefHeight="55.0" prefWidth="132.0" text="haha" />
+   </children>
 </VBox>
