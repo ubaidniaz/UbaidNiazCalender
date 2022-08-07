@@ -39,7 +39,7 @@ public class CalenderController {
     	root.getChildren().addAll(doneButton, label);
     	
 //    	Calendar c = Calendar.getInstance();
-//        //System.out.println("The Current Date is:" + c.getTime());
+//       System.out.println("The Current Date is:" + c.getTime());
 //        
 //        Scanner myObj = new Scanner(System.in);
 //        int num = myObj.nextInt();

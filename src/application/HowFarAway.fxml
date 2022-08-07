@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox prefHeight="220.0" prefWidth="262.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowFarController">
+<VBox prefHeight="273.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowFarController">
    <children>
+      <Label fx:id="testLabel" prefHeight="32.0" prefWidth="240.0" text="How Far Away Is ......">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Label>
       <Button mnemonicParsing="false" onAction="#goBack" text="go back" />
-      <Label fx:id="testLabel" prefHeight="55.0" prefWidth="132.0" text="haha" />
+      <AnchorPane prefHeight="297.0" prefWidth="373.0">
+         <children>
+            <TextField fx:id="daysTextfield" layoutX="112.0" layoutY="5.0" prefHeight="25.0" prefWidth="73.0" />
+            <Label layoutY="1.0" prefHeight="34.0" prefWidth="158.0" text="How far away is ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="187.0" layoutY="1.0" prefHeight="34.0" prefWidth="59.0" text="days">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="daysTextSet" layoutX="28.0" layoutY="41.0" prefHeight="17.0" prefWidth="349.0" />
+            <Button layoutX="227.0" layoutY="6.0" mnemonicParsing="false" onAction="#getDays" prefHeight="25.0" prefWidth="29.0" text="Button" />
+         </children>
+      </AnchorPane>
    </children>
 </VBox>
