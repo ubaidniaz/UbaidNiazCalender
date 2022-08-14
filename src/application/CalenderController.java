@@ -60,21 +60,14 @@ public class CalenderController {
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(howFarScene);
 		window.show();
+	}
+	@FXML
+	void calenderButton(ActionEvent event) throws IOException {
+		Parent calenderButton = FXMLLoader.load(getClass().getResource("CalenderButtonView.fxml"));
+		Scene calenderScene = new Scene(calenderButton);
 		
-//		Scene mainScene = applicationStage.getScene();
-//		VBox root = new VBox();
-//		Scene timeZoneScene = new Scene(root,400,400);
-//		applicationStage.setScene(timeZoneScene);
-//		Label label = new Label("seufkh");
-//		Button doneButton = new Button("Done");
-//    	doneButton.setOnAction(new EventHandler <ActionEvent>() {
-//			public void handle(ActionEvent t) {
-//				applicationStage.setScene(mainScene);
-//				
-//			}
-//    	});
-//    	
-//    	root.getChildren().addAll(doneButton, label);
-//	}
-}
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(calenderScene);
+		window.show();
+	}
 }
