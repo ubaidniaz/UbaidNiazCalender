@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class HowFarController {
-//	Stage applicationStage;
+	Stage applicationStage;
 	
 	@FXML
 	private Label testLabel;
@@ -25,10 +26,10 @@ public class HowFarController {
 
     @FXML
     void goBack(ActionEvent event) {
-    	//testLabel.setText("WOW");
+    	
 
-//    	Scene mainScene = applicationStage.getScene();
-//		applicationStage.setScene(mainScene);
+//    	Scene mainScene = mainStage.getScene();
+//    	applicationStage.setScene(mainScene);
 
     }
     @FXML
@@ -36,7 +37,6 @@ public class HowFarController {
     	Calendar c = Calendar.getInstance();
       System.out.println("The Current Date is:" + c.getTime());
        int num = Integer.parseInt(daysTextfield.getText());
-       
        
        
        c.add(Calendar.DATE, num);

@@ -17,7 +17,7 @@ public class Main extends Application {
 			VBox root = loader.load(new FileInputStream("src/application/CalenderView.fxml"));
 			CalenderController controller = (CalenderController)loader.getController();
 			controller.applicationStage = primaryStage;
-			//controller1.applicationStage = primaryStage;
+			
 			Scene scene = new Scene(root,800,500);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Ubaid's Final Project");

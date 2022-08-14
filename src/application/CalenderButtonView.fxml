@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="759.0" prefWidth="1118.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.CalenderButtonViewController">
+   <children>
+      <Label layoutX="29.0" layoutY="29.0" prefHeight="45.0" prefWidth="205.0" text="Enter a month:" />
+      <Label layoutX="29.0" layoutY="121.0" prefHeight="45.0" prefWidth="179.0" text="Enter a year:" />
+      <TextField layoutX="202.0" layoutY="119.0" prefHeight="65.0" prefWidth="241.0" text="eg: 2022" />
+   </children>
+</AnchorPane>
