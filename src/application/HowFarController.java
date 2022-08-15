@@ -60,33 +60,33 @@ public class HowFarController {
     }
     @FXML
     void getSecs(ActionEvent event) {
-    	HowFar secsHowFar = new HowFar(secsTextfield, secsTextSet, Calendar.SECOND);
+    	 HowFar secsHowFar = new HowFar(secsTextfield, secsTextSet, Calendar.SECOND);
     	 secsHowFar.setValue(secsTextfield, secsTextSet, Calendar.SECOND);
    
     }
     @FXML
     void getMins(ActionEvent event) {
-    	
+    	 HowFar minsHowFar = new HowFar(minsTextfield, minsTextSet, Calendar.MINUTE);
+    	 minsHowFar.setValue(minsTextfield, minsTextSet, Calendar.MINUTE);
     }
     
     @FXML
     void getDays(ActionEvent event) {
-    	Calendar c = Calendar.getInstance();
-      System.out.println("The Current Date is:" + c.getTime());
-       int num = Integer.parseInt(daysTextfield.getText());
-       
-       
-       c.add(Calendar.DATE, num);
-       System.out.println(c.getTime());
-       daysTextSet.setText(num + " days later: " + String.valueOf(c.getTime()));
+    	 HowFar daysHowFar = new HowFar(daysTextfield, daysTextSet, Calendar.DATE);
+    	 daysHowFar.setValue(daysTextfield, daysTextSet, Calendar.DATE);
+    	
     }
     
     @FXML
     void getMonths(ActionEvent event) {
+    	 HowFar monthsHowFar = new HowFar(monthsTextfield, monthsTextSet, Calendar.MONTH);
+    	 monthsHowFar.setValue(monthsTextfield, monthsTextSet, Calendar.MONTH);
     	
     }
     @FXML
     void getYears(ActionEvent event) {
+    	 HowFar yearsHowFar = new HowFar(yearsTextfield, secsTextSet, Calendar.YEAR);
+    	 yearsHowFar.setValue(yearsTextfield, yearsTextSet, Calendar.YEAR);
     	
     }
 }
