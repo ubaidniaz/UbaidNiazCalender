@@ -7,29 +7,102 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="273.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowFarController">
+<VBox prefHeight="616.0" prefWidth="1089.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HowFarController">
    <children>
-      <Label fx:id="testLabel" prefHeight="32.0" prefWidth="240.0" text="How Far Away Is ......">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="22.0" />
-         </font>
-      </Label>
-      <Button mnemonicParsing="false" onAction="#goBack" text="go back" />
-      <AnchorPane prefHeight="297.0" prefWidth="373.0">
+      <AnchorPane prefHeight="620.0" prefWidth="1089.0">
          <children>
-            <TextField fx:id="daysTextfield" layoutX="112.0" layoutY="5.0" prefHeight="25.0" prefWidth="73.0" />
-            <Label layoutY="1.0" prefHeight="34.0" prefWidth="158.0" text="How far away is ">
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" text="go back" />
+            <Label fx:id="testLabel" layoutX="349.0" prefHeight="70.0" prefWidth="448.0" text="How Far Away Is ......">
                <font>
-                  <Font size="16.0" />
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
                </font>
             </Label>
-            <Label layoutX="187.0" layoutY="1.0" prefHeight="34.0" prefWidth="59.0" text="days">
+            <Label layoutX="22.0" layoutY="134.0" prefHeight="55.0" prefWidth="179.0" text="How far away is ">
                <font>
-                  <Font size="16.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="daysTextSet" layoutX="28.0" layoutY="41.0" prefHeight="17.0" prefWidth="349.0" />
-            <Button layoutX="227.0" layoutY="6.0" mnemonicParsing="false" onAction="#getDays" prefHeight="25.0" prefWidth="29.0" text="Button" />
+            <TextField fx:id="secsTextfield" layoutX="201.0" layoutY="145.0" prefHeight="35.0" prefWidth="170.0" />
+            <Label layoutX="386.0" layoutY="145.0" prefHeight="34.0" prefWidth="59.0" text="secs">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="438.0" layoutY="142.0" mnemonicParsing="false" onAction="#getSecs" prefHeight="40.0" prefWidth="50.0" text="Go">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label fx:id="secsTextSet" layoutX="494.0" layoutY="139.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
+            <Label layoutX="22.0" layoutY="434.0" prefHeight="55.0" prefWidth="179.0" text="How far away is ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="minsTextfield" layoutX="201.0" layoutY="245.0" prefHeight="35.0" prefWidth="170.0" />
+            <Button layoutX="438.0" layoutY="242.0" mnemonicParsing="false" onAction="#getMins" prefHeight="40.0" prefWidth="50.0" text="Go">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="386.0" layoutY="245.0" prefHeight="35.0" prefWidth="86.0" text="mins">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="daysTextfield" layoutX="201.0" layoutY="345.0" prefHeight="35.0" prefWidth="170.0" />
+            <Label layoutX="22.0" layoutY="534.0" prefHeight="55.0" prefWidth="179.0" text="How far away is ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="386.0" layoutY="345.0" prefHeight="35.0" prefWidth="86.0" text="days">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="740.0" layoutY="383.0" prefHeight="17.0" prefWidth="349.0" />
+            <Button layoutX="438.0" layoutY="342.0" mnemonicParsing="false" onAction="#getDays" prefHeight="40.0" prefWidth="50.0" text="Go">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="22.0" layoutY="234.0" prefHeight="55.0" prefWidth="179.0" text="How far away is ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="334.0" prefHeight="55.0" prefWidth="179.0" text="How far away is ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="monthsTextfield" layoutX="201.0" layoutY="445.0" prefHeight="35.0" prefWidth="170.0" />
+            <Label layoutX="386.0" layoutY="445.0" prefHeight="35.0" prefWidth="86.0" text="months">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="475.0" layoutY="442.0" mnemonicParsing="false" onAction="#getMonths" prefHeight="40.0" prefWidth="50.0" text="Go">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="yearsTextfield" layoutX="201.0" layoutY="545.0" prefHeight="35.0" prefWidth="170.0" />
+            <Label layoutX="386.0" layoutY="545.0" prefHeight="35.0" prefWidth="86.0" text="years">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="475.0" layoutY="542.0" mnemonicParsing="false" onAction="#getYears" prefHeight="40.0" prefWidth="50.0" text="Go">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="minsTextSet" layoutX="494.0" layoutY="239.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
+            <Label fx:id="daysTextSet" layoutX="494.0" layoutY="339.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
+            <Label fx:id="monthsTextSet" layoutY="436.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
+            <Label fx:id="yearsTextSet" layoutX="532.0" layoutY="539.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
+            <Label fx:id="yearsTextSet1" layoutX="532.0" layoutY="439.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
          </children>
       </AnchorPane>
    </children>
