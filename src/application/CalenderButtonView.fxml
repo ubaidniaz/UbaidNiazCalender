@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="602.0" prefWidth="856.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalenderButtonController">
+<AnchorPane prefHeight="1091.0" prefWidth="1837.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalenderButtonController">
    <children>
       <Label layoutX="29.0" layoutY="29.0" prefHeight="45.0" prefWidth="205.0" text="Enter a month:" />
       <Label layoutX="29.0" layoutY="121.0" prefHeight="45.0" prefWidth="179.0" text="Enter a year:" />
-      <TextField layoutX="202.0" layoutY="119.0" prefHeight="65.0" prefWidth="241.0" text="eg: 2022" />
+      <TextField fx:id="yearTextfield" layoutX="202.0" layoutY="119.0" prefHeight="65.0" prefWidth="241.0" />
+      <TextField fx:id="monthTextfield" layoutX="234.0" layoutY="29.0" prefHeight="65.0" prefWidth="241.0" />
+      <Label layoutX="443.0" layoutY="283.0" prefHeight="57.0" prefWidth="553.0" text="&quot;Sun Mon Tue Wed Thu Fri Sat&quot;">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Button layoutX="581.0" layoutY="144.0" mnemonicParsing="false" onAction="#displayCalender" text="Button" />
+      <Label fx:id="calenderLabel" layoutX="456.0" layoutY="327.0" prefHeight="330.0" prefWidth="553.0">
+         <font>
+            <Font size="48.0" />
+         </font></Label>
    </children>
 </AnchorPane>
