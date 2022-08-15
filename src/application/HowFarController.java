@@ -60,7 +60,9 @@ public class HowFarController {
     }
     @FXML
     void getSecs(ActionEvent event) {
-    	
+    	HowFar secsHowFar = new HowFar(secsTextfield, secsTextSet, Calendar.SECOND);
+    	 secsHowFar.setValue(secsTextfield, secsTextSet, Calendar.SECOND);
+   
     }
     @FXML
     void getMins(ActionEvent event) {
