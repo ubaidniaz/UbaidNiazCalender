@@ -12,7 +12,7 @@
       <AnchorPane prefHeight="620.0" prefWidth="1089.0">
          <children>
             <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goBack" text="go back" />
-            <Label fx:id="testLabel" layoutX="349.0" prefHeight="70.0" prefWidth="448.0" text="How Far Away Is ......">
+            <Label fx:id="titleLabel" layoutX="349.0" prefHeight="70.0" prefWidth="448.0" text="How Far Away Is ......">
                <font>
                   <Font name="Arial Rounded MT Bold" size="40.0" />
                </font>

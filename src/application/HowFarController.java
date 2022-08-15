@@ -14,13 +14,39 @@ public class HowFarController {
 	Stage applicationStage;
 	
 	@FXML
-	private Label testLabel;
+	private Label titleLabel;
+	
+	@FXML
+	private TextField secsTextfield;
+	
+	@FXML
+	private TextField minsTextfield;
+	
+	@FXML
+	private TextField daysTextfield;
+	
+	@FXML
+	private TextField monthsTextfield;
+	
+	@FXML
+	private TextField yearsTextfield;
+	
+	@FXML
+	private Label secsTextSet;
+	
+	@FXML
+	private Label minsTextSet;
 	
 	@FXML
 	private Label daysTextSet;
 	
 	@FXML
-	private TextField daysTextfield;
+	private Label monthsTextSet;
+	
+	@FXML
+	private Label yearsTextSet;
+	
+	
 	
 
 
@@ -33,6 +59,15 @@ public class HowFarController {
 
     }
     @FXML
+    void getSecs(ActionEvent event) {
+    	
+    }
+    @FXML
+    void getMins(ActionEvent event) {
+    	
+    }
+    
+    @FXML
     void getDays(ActionEvent event) {
     	Calendar c = Calendar.getInstance();
       System.out.println("The Current Date is:" + c.getTime());
@@ -43,5 +78,13 @@ public class HowFarController {
        System.out.println(c.getTime());
        daysTextSet.setText(num + " days later: " + String.valueOf(c.getTime()));
     }
-
+    
+    @FXML
+    void getMonths(ActionEvent event) {
+    	
+    }
+    @FXML
+    void getYears(ActionEvent event) {
+    	
+    }
 }
