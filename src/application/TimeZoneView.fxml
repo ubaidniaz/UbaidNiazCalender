@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox prefHeight="870.0" prefWidth="1178.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.TimeZoneController">
-	<!-- TODO Add Nodes -->
+<VBox prefHeight="870.0" prefWidth="1178.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TimeZoneController">
+   <children>
+      <AnchorPane prefHeight="1280.0" prefWidth="1178.0">
+         <children>
+            <Label layoutX="360.0" layoutY="27.0" prefHeight="53.0" prefWidth="369.0" text="TimeZone Changer">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="233.0" prefHeight="45.0" prefWidth="202.0" text="Local Time:" />
+            <Label fx:id="localTimeLabel" layoutX="390.0" layoutY="234.0" prefHeight="45.0" prefWidth="267.0" text="Label" />
+            <Label fx:id="resultTimeLabel" layoutX="390.0" layoutY="350.0" prefHeight="45.0" prefWidth="202.0" text="Label" />
+            <ComboBox fx:id="countriesComboBox" layoutX="79.0" layoutY="318.0" prefWidth="150.0" />
+            <Button layoutX="260.0" layoutY="445.0" mnemonicParsing="false" onAction="#getTimeZoneButton" text="Button" />
+         </children>
+      </AnchorPane>
+   </children>
 </VBox>
