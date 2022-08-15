@@ -48,8 +48,6 @@ public class HowFarController {
 	
 	
 	
-
-
     @FXML
     void goBack(ActionEvent event) {
     	

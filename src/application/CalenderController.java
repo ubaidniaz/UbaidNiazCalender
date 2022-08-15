@@ -21,37 +21,17 @@ public class CalenderController {
 	
 
 	@FXML
-	void timeZonesButton(ActionEvent event) {
-    	Scene mainScene = applicationStage.getScene();
-		VBox root = new VBox();
-		Scene timeZoneScene = new Scene(root,400,400);
-		applicationStage.setScene(timeZoneScene);
+	void timeZonesButton(ActionEvent event) throws IOException {
+		Parent timeZoneParent = FXMLLoader.load(getClass().getResource("TimeZoneView.fxml"));
+		Scene howFarScene = new Scene(timeZoneParent);
 		
-		Label label = new Label("seufkh");
-		Button doneButton = new Button("Done");
-    	doneButton.setOnAction(new EventHandler <ActionEvent>() {
-			public void handle(ActionEvent t) {
-				applicationStage.setScene(mainScene);
-				
-			}
-    	});
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(howFarScene);
+		window.show();
     	
-    	root.getChildren().addAll(doneButton, label);
-    	
-//    	Calendar c = Calendar.getInstance();
-//       System.out.println("The Current Date is:" + c.getTime());
-//        
-//        Scanner myObj = new Scanner(System.in);
-//        int num = myObj.nextInt();
-//        
-//        c.add(Calendar.DATE, num);
-//        System.out.println(c.getTime());
-        
-        
-    	
+
 	}
 	
-
 	@FXML
 	void howFarButton(ActionEvent event) throws IOException {
 		Parent howFarParent = FXMLLoader.load(getClass().getResource("HowFarAway.fxml"));

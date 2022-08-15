@@ -39,12 +39,12 @@
                </font>
             </Label>
             <TextField fx:id="minsTextfield" layoutX="201.0" layoutY="245.0" prefHeight="35.0" prefWidth="170.0" />
-            <Button layoutX="438.0" layoutY="242.0" mnemonicParsing="false" onAction="#getMins" prefHeight="40.0" prefWidth="50.0" text="Go">
+            <Button layoutX="440.0" layoutY="242.0" mnemonicParsing="false" onAction="#getMins" prefHeight="40.0" prefWidth="50.0" text="Go">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Label layoutX="386.0" layoutY="245.0" prefHeight="35.0" prefWidth="86.0" text="mins">
+            <Label layoutX="386.0" layoutY="245.0" prefHeight="35.0" prefWidth="59.0" text="mins">
                <font>
                   <Font size="24.0" />
                </font>
@@ -100,9 +100,8 @@
             </Button>
             <Label fx:id="minsTextSet" layoutX="494.0" layoutY="239.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
             <Label fx:id="daysTextSet" layoutX="494.0" layoutY="339.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
-            <Label fx:id="monthsTextSet" layoutY="436.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
             <Label fx:id="yearsTextSet" layoutX="532.0" layoutY="539.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
-            <Label fx:id="yearsTextSet1" layoutX="532.0" layoutY="439.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
+            <Label fx:id="monthsTextSet" layoutX="532.0" layoutY="439.0" prefHeight="53.0" prefWidth="590.0" textAlignment="CENTER" />
          </children>
       </AnchorPane>
    </children>
