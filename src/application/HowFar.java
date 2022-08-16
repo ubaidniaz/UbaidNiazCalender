@@ -18,14 +18,20 @@ public class HowFar  {
 				
 	}
 	
-	void setValue(TextField getHowFar, Label display, int howFarAdd) {
+	void setValue(TextField getHowFar, Label display, int howFarAdd, String displayWhat) {
 		
 		Calendar c = Calendar.getInstance() ;
 	       int num = Integer.parseInt(getHowFar.getText());
 	       
-	       c.add(howFarAdd, num);;
-	       display.setText(num + " days later: " + String.valueOf(c.getTime()));
+	       c.add(howFarAdd, num);
+	       if(num < 0) {
+		       display.setText(num* -1 + " " + displayWhat + " before: " + String.valueOf(c.getTime()));
+	       }
+	       else {
+		       display.setText(num + " " + displayWhat + " later: " + String.valueOf(c.getTime()));
+
+	       }
 	    
 	}
+	}
 
-}
