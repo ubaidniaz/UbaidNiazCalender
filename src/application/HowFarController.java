@@ -53,12 +53,8 @@ public class HowFarController {
 	
     @FXML
     void goBack(ActionEvent event) throws IOException {
-    	Parent calenderParent = FXMLLoader.load(getClass().getResource("CalenderView.fxml"));
-		Scene calenderScene = new Scene(calenderParent);
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(calenderScene);
-		window.show();
+    	FxmlLoader calender = new FxmlLoader("CalenderView");
+		calender.setScene("CalenderView", event);
 
     }
     @FXML

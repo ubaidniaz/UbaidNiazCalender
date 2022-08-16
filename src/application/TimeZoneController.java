@@ -43,14 +43,10 @@ public class TimeZoneController implements Initializable {
 
 	@FXML
 	public void goBackButton(ActionEvent event) throws IOException {
-		Parent calenderParent = FXMLLoader.load(getClass().getResource("CalenderView.fxml"));
-		Scene calenderScene = new Scene(calenderParent);
+		FxmlLoader calender = new FxmlLoader("CalenderView");
+		calender.setScene("CalenderView", event);
 		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(calenderScene);
-		window.show();
-    	
-
+ 
 	}
 	@FXML
 	void getTimeZoneButton (ActionEvent event){

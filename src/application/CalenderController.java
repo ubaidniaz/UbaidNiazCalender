@@ -22,33 +22,18 @@ public class CalenderController {
 
 	@FXML
 	void timeZonesButton(ActionEvent event) throws IOException {
-		Parent timeZoneParent = FXMLLoader.load(getClass().getResource("TimeZoneView.fxml"));
-		Scene howFarScene = new Scene(timeZoneParent);
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setTitle("TimeZone Converter");
-		window.setScene(howFarScene);
-		window.show();
-    	
-
+		FxmlLoader calender = new FxmlLoader("TimeZoneView");
+		calender.setScene("TimeZoneView", event);
 	}
 	
 	@FXML
 	void howFarButton(ActionEvent event) throws IOException {
-		Parent howFarParent = FXMLLoader.load(getClass().getResource("HowFarAway.fxml"));
-		Scene howFarScene = new Scene(howFarParent);
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(howFarScene);
-		window.show();
+		FxmlLoader calender = new FxmlLoader("HowFarAway");
+		calender.setScene("HowFarAway", event);
 	}
 	@FXML
 	void calenderButton(ActionEvent event) throws IOException {
-		Parent calenderButton = FXMLLoader.load(getClass().getResource("CalenderButtonView.fxml"));
-		Scene calenderScene = new Scene(calenderButton);
-		
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(calenderScene);
-		window.show();
+		FxmlLoader calender = new FxmlLoader("CalenderButtonView");
+		calender.setScene("CalenderButtonView", event);
 	}
 }
