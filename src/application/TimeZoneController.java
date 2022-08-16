@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,12 +12,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class TimeZoneController implements Initializable {
-	
 	@FXML
 	private Label localTimeLabel;
 	
@@ -36,7 +41,17 @@ public class TimeZoneController implements Initializable {
 	String dateToString = dateFormatter.format(localDate);
 	
 
-	
+	@FXML
+	public void goBackButton(ActionEvent event) throws IOException {
+		Parent calenderParent = FXMLLoader.load(getClass().getResource("CalenderView.fxml"));
+		Scene calenderScene = new Scene(calenderParent);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(calenderScene);
+		window.show();
+    	
+
+	}
 	@FXML
 	void getTimeZoneButton (ActionEvent event){
 		// user chooses value, TimeZone ID stored as String 

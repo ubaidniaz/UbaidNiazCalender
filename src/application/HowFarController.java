@@ -1,17 +1,20 @@
 package application;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class HowFarController {
-	Stage applicationStage;
 	
 	@FXML
 	private Label titleLabel;
@@ -49,11 +52,13 @@ public class HowFarController {
 	
 	
     @FXML
-    void goBack(ActionEvent event) {
-    	
-
-//    	Scene mainScene = mainStage.getScene();
-//    	applicationStage.setScene(mainScene);
+    void goBack(ActionEvent event) throws IOException {
+    	Parent calenderParent = FXMLLoader.load(getClass().getResource("CalenderView.fxml"));
+		Scene calenderScene = new Scene(calenderParent);
+		
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(calenderScene);
+		window.show();
 
     }
     @FXML
