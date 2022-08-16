@@ -28,7 +28,10 @@ public class CalenderButtonController {
    }
    @FXML
    void displayCalender(ActionEvent event) {
-	   // gets year and month value from user input from textfields
+//	   CalenderButton cb = new CalenderButton(yearTextfield,monthTextfield,calenderLabel);
+//	   cb.setCalender(yearTextfield, monthTextfield, calenderLabel);
+   
+	    //gets year and month value from user input from textfields
 	   int y = Integer.parseInt(yearTextfield.getText());
 	   int m = Integer.parseInt(monthTextfield.getText());
 	   
@@ -57,7 +60,7 @@ public class CalenderButtonController {
 
 		   }
 	   }
-		   
-   }
+   }   
+   
  }
 

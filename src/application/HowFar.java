@@ -5,7 +5,7 @@ import java.util.Calendar;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class HowFar  {
+public class HowFar extends HowFarController  {
 	TextField tf;
 	Label lb;
 	int add;
@@ -18,7 +18,7 @@ public class HowFar  {
 				
 	}
 	
-	void setValue(TextField getHowFar, Label display, int howFarAdd, String displayWhat) {
+	 void setValue(TextField getHowFar, Label display, int howFarAdd, String displayWhat) {
 		String userValue = getHowFar.getText();
 		boolean valid = true;
 		boolean minusExists = false;
