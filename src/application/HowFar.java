@@ -21,12 +21,20 @@ public class HowFar  {
 	void setValue(TextField getHowFar, Label display, int howFarAdd, String displayWhat) {
 		String userValue = getHowFar.getText();
 		boolean valid = true;
+		boolean minusExists = false;
 		for(char c : userValue.toCharArray()) {
 			if(!Character.isDigit(c)) {
-				valid = false;
-				display.setText("PLEASE ENTER A NUMERIC VALUE");
+				if (!minusExists && c == '-') {
+    				minusExists = true;
+
+				}else {
+					valid = false;
+					display.setText("PLEASE ENTER A NUMERIC VALUE");
+				}
+				}
+				
 			}
-		} if (valid){
+		 if (valid){
 			Calendar c = Calendar.getInstance() ;
 		       int num = Integer.parseInt(getHowFar.getText());
 		      
