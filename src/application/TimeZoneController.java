@@ -5,7 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
-
+import java.util.TimeZone;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -39,6 +39,9 @@ public class TimeZoneController implements Initializable {
 	
 	@FXML
 	void getTimeZoneButton (ActionEvent event){
+		String resultTimeZone = countriesComboBox.getValue();
+		String timeZone = getSelectedTimeZone(resultTimeZone);
+		
 		
 	}
 
@@ -52,6 +55,56 @@ public class TimeZoneController implements Initializable {
 			e.printStackTrace();
 		}
 		localTimeLabel.setText(dateFormatter.format(localDate));
+	}
+	
+	public String getSelectedTimeZone(String selectedTimeZone) {
+		switch (selectedTimeZone) {
+		case "Australia":	
+			return "Australia/Canberra";
+		case "Algeria":	
+			return "Africa/Algiers";
+		case "Brazil":	
+			return "America/Sao_Paulo";
+		case "China":	
+			return "Asia/Shanghai";
+		case "Denmark":	
+			return "Europe/Copenhagen";
+		case "Egypt":	
+			return "Africa/Cairo";
+		case "France":	
+			return "Europe/Paris";
+		case "Greenland":	
+			return "America/Godthab";
+		case "Honduras":	       
+			return "America/Tegucigalpa";
+		case "Italy":	
+			return "Europe/Rome";
+		case "India":	
+			return "Asia/Kolkata";
+		case "Japan":	
+			return "Asia/Tokyo";
+		case "Kuwait":	
+			return "Asia/Kuwait";
+		case "Mexico":	
+			return "America/Mexico_City";
+		case "Nigeria":	
+			return "Africa/Lagos";
+		case "Russia":	
+			return "Europe/Moscow";
+		case "South Africa":	
+			return "Africa/Johannesburg";
+		case "Sweden":	
+			return "Europe/Stockholm";
+		case "Thailand":	
+			return "Asia/Bangkok";
+		case "Yemen":	
+			return "Asia/Aden";
+		case "Zimbabwe":	
+			return "Africa/Harare";
+		default:
+			
+		}
+		return "America/Edmonton";
 	}
 }
 
