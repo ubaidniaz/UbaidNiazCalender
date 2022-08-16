@@ -1,5 +1,6 @@
 package application;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.YearMonth;
 
@@ -20,7 +21,11 @@ public class CalenderButtonController {
     private Label calenderLabel;
     
     
-    
+   @FXML
+   void goBackButton(ActionEvent event) throws IOException {
+	   FxmlLoader calender = new FxmlLoader("CalenderView");
+	   calender.setScene("CalenderView", event);
+   }
    @FXML
    void displayCalender(ActionEvent event) {
 	   // gets year and month value from user input from textfields
@@ -37,7 +42,7 @@ public class CalenderButtonController {
 	   if (firstDay != 7) 
 	   for (int i = 0; i < firstDay; i++, counter++) {
 		   
-			   String format = String.format("%-6s", "  ");
+			   String format = String.format("%-6s", " ");
 		       calenderLabel.setText(calenderLabel.getText() + format);
 		   }
 	   
