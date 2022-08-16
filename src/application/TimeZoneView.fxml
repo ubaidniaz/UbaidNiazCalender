@@ -6,20 +6,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="870.0" prefWidth="1178.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TimeZoneController">
+<VBox prefHeight="457.0" prefWidth="428.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TimeZoneController">
    <children>
       <AnchorPane prefHeight="1280.0" prefWidth="1178.0">
          <children>
-            <Label layoutX="360.0" layoutY="27.0" prefHeight="53.0" prefWidth="369.0" text="TimeZone Changer">
+            <Label layoutX="35.0" layoutY="20.0" prefHeight="53.0" prefWidth="355.0" text="TimeZone Converter">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <Label layoutX="79.0" layoutY="233.0" prefHeight="45.0" prefWidth="202.0" text="Local Time:" />
-            <Label fx:id="localTimeLabel" layoutX="390.0" layoutY="234.0" prefHeight="45.0" prefWidth="267.0" text="Label" />
-            <Label fx:id="resultTimeLabel" layoutX="390.0" layoutY="350.0" prefHeight="45.0" prefWidth="202.0" text="Label" />
-            <ComboBox fx:id="countriesComboBox" layoutX="79.0" layoutY="318.0" prefWidth="150.0" />
-            <Button layoutX="260.0" layoutY="445.0" mnemonicParsing="false" onAction="#getTimeZoneButton" text="Button" />
+            <Label layoutX="70.0" layoutY="181.0" prefHeight="45.0" prefWidth="165.0" text="Local Time:" />
+            <Label fx:id="localTimeLabel" layoutX="208.0" layoutY="181.0" prefHeight="45.0" prefWidth="220.0" text="Label" />
+            <Label fx:id="resultTimeLabel" layoutX="208.0" layoutY="246.0" prefHeight="45.0" prefWidth="199.0" text="Select Country" />
+            <ComboBox fx:id="countriesComboBox" layoutX="35.0" layoutY="256.0" prefWidth="150.0" />
+            <Button layoutX="149.0" layoutY="336.0" mnemonicParsing="false" onAction="#getTimeZoneButton" text="Convert" />
+            <Label layoutX="45.0" layoutY="82.0" prefHeight="53.0" prefWidth="380.0" text="Time based on Capital" textFill="RED">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

@@ -26,6 +26,7 @@ public class CalenderController {
 		Scene howFarScene = new Scene(timeZoneParent);
 		
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setTitle("TimeZone Converter");
 		window.setScene(howFarScene);
 		window.show();
     	

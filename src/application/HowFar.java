@@ -22,8 +22,10 @@ public class HowFar  {
 		
 		Calendar c = Calendar.getInstance() ;
 	       int num = Integer.parseInt(getHowFar.getText());
-	       
+	      
 	       c.add(howFarAdd, num);
+	       
+	      
 	       if(num < 0) {
 		       display.setText(num* -1 + " " + displayWhat + " before: " + String.valueOf(c.getTime()));
 	       }
@@ -31,7 +33,7 @@ public class HowFar  {
 		       display.setText(num + " " + displayWhat + " later: " + String.valueOf(c.getTime()));
 
 	       }
-	    
+	    	}
 	}
-	}
+	
 
