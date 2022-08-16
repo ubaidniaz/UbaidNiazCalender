@@ -39,9 +39,26 @@ public class TimeZoneController implements Initializable {
 	
 	@FXML
 	void getTimeZoneButton (ActionEvent event){
-		String resultTimeZone = countriesComboBox.getValue();
-		String timeZone = getSelectedTimeZone(resultTimeZone);
+		// user chooses value, TimeZone ID stored as String 
+		String pickedTimeZone = countriesComboBox.getValue();
+		String timeZone = getSelectedTimeZone(pickedTimeZone);
 		
+		// gets the timezone for the given ID and sets it
+		TimeZone tzTimeZone = TimeZone.getTimeZone(timeZone);
+	    dateFormatter.setTimeZone(tzTimeZone);
+	    
+	    // Stores the date as a String
+	    String stringResultTimeZone = dateFormatter.format(resultDate);
+	    
+	    // Creates new null date 
+	    Date resultTimeZone = null;
+		try {
+			// Converts String to Date object
+			resultTimeZone = dateFormatter.parse(stringResultTimeZone);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+	    resultTimeLabel.setText(dateFormatter.format(resultTimeZone)+"");
 		
 	}
 
