@@ -6,19 +6,19 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class HowFar extends HowFarController  {
-	TextField tf;
-	Label lb;
-	int add;
+	private TextField tf;
+	private Label lb;
+	private int add;
 	
 	
 	HowFar (TextField howFarTextField, Label howFarSetLabel, int whatToAdd){
-		tf = howFarTextField;
-		lb = howFarSetLabel;
-		add = whatToAdd;
+		setTf(howFarTextField);
+		setLb(howFarSetLabel);
+		setAdd(whatToAdd);
 				
 	}
 	
-	 void setValue(TextField getHowFar, Label display, int howFarAdd, String displayWhat) {
+	 public void setValue(TextField getHowFar, Label display, int howFarAdd, String displayWhat) {
 		String userValue = getHowFar.getText();
 		boolean valid = true;
 		boolean minusExists = false;
@@ -51,6 +51,30 @@ public class HowFar extends HowFarController  {
 		    	}
 			
 		}
+
+	public TextField getTf() {
+		return tf;
+	}
+
+	public void setTf(TextField tf) {
+		this.tf = tf;
+	}
+
+	public Label getLb() {
+		return lb;
+	}
+
+	public void setLb(Label lb) {
+		this.lb = lb;
+	}
+
+	public int getAdd() {
+		return add;
+	}
+
+	public void setAdd(int add) {
+		this.add = add;
+	}
 		
 		
 	}

@@ -12,14 +12,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
 public class TimeZoneController implements Initializable {
 	@FXML
@@ -34,11 +29,10 @@ public class TimeZoneController implements Initializable {
 	listOfCountries=FXCollections.observableArrayList("Australia","Algeria","Brazil","China","Denmark","Egypt","France","Greenland","Honduras",
 			"Italy","India","Japan","Kuwait","Mexico","Nigeria","Russia","South Africa","Sweden","Thailand","Yemen","Zimbabwe");
 	
-	
-	SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss a");
-	Date localDate = new Date();
-	Date resultDate;
-	String dateToString = dateFormatter.format(localDate);
+	private SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss a");
+	private Date localDate = new Date();
+	private Date resultDate;
+	private String dateToString = dateFormatter.format(localDate);
 	
 
 	@FXML

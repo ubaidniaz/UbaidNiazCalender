@@ -2,17 +2,11 @@ package application;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 public class HowFarController {
 	
@@ -52,39 +46,39 @@ public class HowFarController {
 	
 	
     @FXML
-    void goBack(ActionEvent event) throws IOException {
+   public void goBack(ActionEvent event) throws IOException {
     	FxmlLoader calender = new FxmlLoader("CalenderView");
 		calender.setScene("CalenderView", event);
 
     }
     @FXML
-    void getSecs(ActionEvent event) {
+   public void getSecs(ActionEvent event) {
     	 HowFar secsHowFar = new HowFar(secsTextfield, secsTextSet, Calendar.SECOND);
     	 secsHowFar.setValue(secsTextfield, secsTextSet, Calendar.SECOND , "seconds");
    
     }
     
 	@FXML
-    void getMins(ActionEvent event) {
+    public void getMins(ActionEvent event) {
     	 HowFar minsHowFar = new HowFar(minsTextfield, minsTextSet, Calendar.MINUTE);
     	 minsHowFar.setValue(minsTextfield, minsTextSet, Calendar.MINUTE, "minutes");
     }
     
     @FXML
-    void getDays(ActionEvent event) {
+    public void getDays(ActionEvent event) {
     	 HowFar daysHowFar = new HowFar(daysTextfield, daysTextSet, Calendar.DATE);
     	 daysHowFar.setValue(daysTextfield, daysTextSet, Calendar.DATE, "days");
     	
     }
     
     @FXML
-    void getMonths(ActionEvent event) {
+    public void getMonths(ActionEvent event) {
     	 HowFar monthsHowFar = new HowFar(monthsTextfield, monthsTextSet, Calendar.MONTH);
     	 monthsHowFar.setValue(monthsTextfield, monthsTextSet, Calendar.MONTH, "months");
     	
     }
     @FXML
-    void getYears(ActionEvent event) {
+    public void getYears(ActionEvent event) {
     	 HowFar yearsHowFar = new HowFar(yearsTextfield, secsTextSet, Calendar.YEAR);
     	 yearsHowFar.setValue(yearsTextfield, yearsTextSet, Calendar.YEAR, "years");
     	

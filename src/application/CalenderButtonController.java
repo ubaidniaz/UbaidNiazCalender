@@ -22,12 +22,12 @@ public class CalenderButtonController {
     
     
    @FXML
-   void goBackButton(ActionEvent event) throws IOException {
+   public void goBackButton(ActionEvent event) throws IOException {
 	   FxmlLoader calender = new FxmlLoader("CalenderView");
 	   calender.setScene("CalenderView", event);
    }
    @FXML
-   void displayCalender(ActionEvent event) {
+   public void displayCalender(ActionEvent event) {
 //	   CalenderButton cb = new CalenderButton(yearTextfield,monthTextfield,calenderLabel);
 //	   cb.setCalender(yearTextfield, monthTextfield, calenderLabel);
    
