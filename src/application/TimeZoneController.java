@@ -58,7 +58,7 @@ public class TimeZoneController implements Initializable {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-	    resultTimeLabel.setText(dateFormatter.format(resultTimeZone)+"");
+	    resultTimeLabel.setText(dateFormatter.format(resultTimeZone));
 		
 	}
 
