@@ -1,7 +1,9 @@
 package application;
 
 import java.net.URL;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 
@@ -27,6 +29,12 @@ public class TimeZoneController implements Initializable {
 	listOfCountries=FXCollections.observableArrayList("Australia","Algeria","Brazil","China","Denmark","Egypt","France","Greenland","Honduras",
 			"Italy","India","Japan","Kuwait","Mexico","Nigeria","Russia","South Africa","Sweden","Thailand","Yemen","Zimbabwe");
 	
+	
+	SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss a");
+	Date localDate = new Date();
+	Date resultDate;
+	String dateToString = dateFormatter.format(localDate);
+	
 
 	
 	@FXML
@@ -36,8 +44,14 @@ public class TimeZoneController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
+		countriesComboBox.setItems(listOfCountries);
+		try {
+			resultDate = dateFormatter.parse(dateToString);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		localTimeLabel.setText(dateFormatter.format(localDate));
 	}
 }
 
