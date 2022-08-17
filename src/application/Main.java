@@ -15,9 +15,12 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new	FXMLLoader();
 			VBox root = loader.load(new FileInputStream("src/application/CalenderView.fxml"));
-			Scene scene = new Scene(root,400,400);
+			CalenderController controller = (CalenderController)loader.getController();
+			controller.applicationStage = primaryStage;
+			
+			Scene scene = new Scene(root,800,500);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Ubaid's Final Project");
+			primaryStage.setTitle("Calender N More");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
