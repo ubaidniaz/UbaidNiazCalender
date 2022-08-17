@@ -20,7 +20,7 @@ public class Main extends Application {
 			
 			Scene scene = new Scene(root,800,500);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Ubaid's Final Project");
+			primaryStage.setTitle("Calender N More");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

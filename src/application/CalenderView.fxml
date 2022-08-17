@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="438.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalenderController">
+<VBox prefHeight="438.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalenderController">
    <children>
       <Button mnemonicParsing="false" onAction="#calenderButton" prefHeight="116.0" prefWidth="324.0" text="Calender">
          <VBox.margin>
@@ -23,7 +24,7 @@
             <Insets left="20.0" top="10.0" />
          </VBox.margin>
       </Button>
-      <Label prefHeight="54.0" prefWidth="343.0" text="The bad news is time flies, The good news is you're the pilot">
+      <Label prefHeight="53.0" prefWidth="504.0" text="The bad news is time flies, The good news is you're the pilot - Michael Altshuler">
          <VBox.margin>
             <Insets left="20.0" top="10.0" />
          </VBox.margin>

@@ -29,6 +29,7 @@ public class TimeZoneController implements Initializable {
 	listOfCountries=FXCollections.observableArrayList("Australia","Algeria","Brazil","China","Denmark","Egypt","France","Greenland","Honduras",
 			"Italy","India","Japan","Kuwait","Mexico","Nigeria","Russia","South Africa","Sweden","Thailand","Yemen","Zimbabwe");
 	
+	// Constructors
 	private SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd  hh:mm:ss a");
 	private Date localDate = new Date();
 	private Date resultDate;
@@ -36,6 +37,7 @@ public class TimeZoneController implements Initializable {
 	
 
 	@FXML
+	// Calls FxmlLoader Class to create new instance of scene and set scene
 	public void goBackButton(ActionEvent event) throws IOException {
 		FxmlLoader calender = new FxmlLoader("CalenderView");
 		calender.setScene("CalenderView", event);
@@ -43,6 +45,7 @@ public class TimeZoneController implements Initializable {
  
 	}
 	@FXML
+	
 	void getTimeZoneButton (ActionEvent event){
 		// user chooses value, TimeZone ID stored as String 
 		String pickedTimeZone = countriesComboBox.getValue();
@@ -63,12 +66,14 @@ public class TimeZoneController implements Initializable {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		// sets the resulting timezone label
 	    resultTimeLabel.setText(dateFormatter.format(resultTimeZone));
 		
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		//Initializes our FXML ComboBox
 		countriesComboBox.setItems(listOfCountries);
 		try {
 			resultDate = dateFormatter.parse(dateToString);
@@ -76,9 +81,16 @@ public class TimeZoneController implements Initializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		// sets the label with the local machine date/time
 		localTimeLabel.setText(dateFormatter.format(localDate));
 	}
 	
+	/**
+	 * This method takes a list as cases 
+	 * @param selectedTimeZone : user picks this from ComboBox
+	 * @return the corresponding timeZone ID given by the users case
+	 * @author ubaidullah.niaz
+	 */
 	public String getSelectedTimeZone(String selectedTimeZone) {
 		switch (selectedTimeZone) {
 		case "Australia":	

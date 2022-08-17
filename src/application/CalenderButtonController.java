@@ -22,15 +22,16 @@ public class CalenderButtonController {
     
     
    @FXML
+  	// Calls FxmlLoader Class to create new instance of scene and set scene
    public void goBackButton(ActionEvent event) throws IOException {
 	   FxmlLoader calender = new FxmlLoader("CalenderView");
 	   calender.setScene("CalenderView", event);
    }
-   @FXML
-   public void displayCalender(ActionEvent event) {
-//	   CalenderButton cb = new CalenderButton(yearTextfield,monthTextfield,calenderLabel);
-//	   cb.setCalender(yearTextfield, monthTextfield, calenderLabel);
    
+   @FXML
+   // displays corresponding months calender from users input
+   public void displayCalender(ActionEvent event) {
+
 	    //gets year and month value from user input from textfields
 	   int y = Integer.parseInt(yearTextfield.getText());
 	   int m = Integer.parseInt(monthTextfield.getText());
@@ -42,6 +43,8 @@ public class CalenderButtonController {
 	   // stores it as an int variable
 	   int firstDay = LocalDate.of(y, m, 1).getDayOfWeek().getValue();
 	   
+	   // Creates inital row for first week, depending on when month starts
+	   // set text to label
 	   if (firstDay != 7) 
 	   for (int i = 0; i < firstDay; i++, counter++) {
 		   
@@ -49,12 +52,12 @@ public class CalenderButtonController {
 		       calenderLabel.setText(calenderLabel.getText() + format);
 		   }
 	   
-	   
+	   // Adds the rest of the weeks to the same label from above
 	   for (int i = 1; i <= yearNmonth.getMonth().length(yearNmonth.isLeapYear()); i++, counter++) {
 		   String format1 = String.format("%-4d", i);
 		   	calenderLabel.setText(calenderLabel.getText()+ format1);
 
-		   // New line if the value of the counter is multiple of 7(a week)
+		   // add a New line to same label if the value of the counter is multiple of 7(a week)
 		   if (counter % 7 == 0) {
 			   	calenderLabel.setText(calenderLabel.getText() + "\n");   
 

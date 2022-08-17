@@ -46,12 +46,15 @@ public class HowFarController {
 	
 	
     @FXML
+	// Calls FxmlLoader Class to create new instance of scene and set scene
    public void goBack(ActionEvent event) throws IOException {
     	FxmlLoader calender = new FxmlLoader("CalenderView");
 		calender.setScene("CalenderView", event);
 
     }
     @FXML
+    // Uses the subclass HowFar to create an instance of the argument and set value that way
+    // (For all action events below as well)                                                                                       
    public void getSecs(ActionEvent event) {
     	 HowFar secsHowFar = new HowFar(secsTextfield, secsTextSet, Calendar.SECOND);
     	 secsHowFar.setValue(secsTextfield, secsTextSet, Calendar.SECOND , "seconds");
